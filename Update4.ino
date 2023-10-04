@@ -25,8 +25,8 @@ const char* password = STAPSK;
 
 ESP8266WebServer httpServer(80);
 ESP8266HTTPUpdateServer httpUpdater;
-
-#include <ESP8266FtpServer.h> 
+#include <FS.h>                                                         // Библиотека для работы с файловой системой
+#include <ESP8266FtpServer.h>                                           // Библиотека для работы с SPIFFS по FTP
 FtpServer ftpSrv; //для фтп
 
 

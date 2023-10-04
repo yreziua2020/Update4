@@ -47,7 +47,7 @@ void setup(void) {
   httpUpdater.setup(&httpServer);     //для обновления
   httpServer.begin();
 
-  ftpSrv.begin("admin2","");                                        // Поднимаем FTP-сервер для удобства отладки работы HTML (логин: relay, пароль: relay)
+  ftpSrv.begin("admin","");                                        // Поднимаем FTP-сервер для удобства отладки работы HTML (логин: relay, пароль: relay)
 
  // MDNS.addService("http", "tcp", 80);  Serial.printf("HTTPUpdateServer ready! Open http://%s.local/update in your browser\n", host);
 }

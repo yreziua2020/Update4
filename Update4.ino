@@ -23,8 +23,14 @@ const char* host = "esp8266-webupdate";
 const char* ssid = STASSID;
 const char* password = STAPSK;
 
+
+
 ESP8266WebServer httpServer(80);
 ESP8266HTTPUpdateServer httpUpdater;
+
+#define OTAUSER "admin"      // Логин для входа в OTA
+#define OTAPASSWORD "admin"  // Пароль для входа в ОТА
+//#define OTAPATH "/firmware"  // Путь, который будем дописывать после ip адреса в браузере.
 
 void setup(void) {
 

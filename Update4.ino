@@ -44,7 +44,11 @@ void setup(void) {
 
   //MDNS.begin(host);
 
-  httpUpdater.setup(&httpServer); 
+  //httpUpdater.setup(&httpServer);     //для обновления
+ // httpUpdater.setup(&httpServer, OTAPATH, OTAUSER, OTAPASSWORD); //для обновления по вебу 
+  httpUpdater.setup(&httpServer,  OTAUSER, OTAPASSWORD); //для обновления по вебу 
+
+//  httpUpdater.setup(&httpServer); 
   httpServer.begin();
 
  // MDNS.addService("http", "tcp", 80);  Serial.printf("HTTPUpdateServer ready! Open http://%s.local/update in your browser\n", host);
